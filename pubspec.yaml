@@ -1,6 +1,6 @@
 name: pageview_widget_indicator
 description: PageView indicator
-version: 0.0.1
+version: 0.0.2
 repository: https://github.com/andersonfds/pageview_widget_indicator
 
 environment:
