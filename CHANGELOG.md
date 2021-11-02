@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.3+1
+
+* Updated documentation
+
 ## 0.0.3
 
 * Updated documentation

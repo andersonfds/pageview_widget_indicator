@@ -2,7 +2,7 @@
 
 This is a widget that syncronizes with your pageView and display a nice indicator on a widget.
 
-![page view indicator example](/assets/pageview_widget_example.gif)
+![page view indicator example](https://github.com/andersonfds/pageview_widget_indicator/blob/main/assets/pageview_widget_example.gif?raw=true)
 
 Usage:
 
