@@ -35,11 +35,11 @@ class PageViewIndicator extends StatefulWidget {
   final int itemCount;
 
   const PageViewIndicator({
-    Key? key,
-    required this.builder,
-    required this.pageController,
-    required this.itemWidth,
-    required this.itemCount,
+    Key key,
+    @required this.builder,
+    @required this.pageController,
+    @required this.itemWidth,
+    @required this.itemCount,
     this.height = kToolbarHeight,
     this.alignment = PageViewAlignment.center,
   }) : super(key: key);
@@ -50,7 +50,7 @@ class PageViewIndicator extends StatefulWidget {
 
 class _PageViewIndicatorState extends State<PageViewIndicator> {
   final ItemScrollController _scrollController = ItemScrollController();
-  late int _page = 0;
+  int _page = 0;
 
   set page(int value) {
     if (_page != value) {
