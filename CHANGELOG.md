@@ -1,9 +1,14 @@
 # Changelog
 
-## 0.0.1
+## 0.0.3
 
-* Initial Release
+* Updated documentation
+* Removed nullsafety to reach everyone
 
 ## 0.0.2
 
 * Fixed licensing
+
+## 0.0.1
+
+* Initial Release

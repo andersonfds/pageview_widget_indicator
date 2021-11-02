@@ -1,16 +1,16 @@
 name: pageview_widget_indicator
 description: PageView indicator
-version: 0.0.2
+version: 0.0.3
 repository: https://github.com/andersonfds/pageview_widget_indicator
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.10.0 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  scrollable_positioned_list: ^0.2.2
+  scrollable_positioned_list: ^0.1.10
 
 dev_dependencies:
   flutter_test:
