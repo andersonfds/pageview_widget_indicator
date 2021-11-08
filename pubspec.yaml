@@ -1,5 +1,6 @@
 name: pageview_widget_indicator
-description: PageView indicator
+description:
+  A builder widget that will allow you to create custom indicators for your flutter pageViews
 version: 0.0.3+1
 repository: https://github.com/andersonfds/pageview_widget_indicator
 
