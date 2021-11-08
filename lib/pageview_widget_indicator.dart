@@ -3,6 +3,9 @@ library pageview_widget_indicator;
 import 'package:flutter/material.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
+/// The alignment of the PageView items
+///
+/// When scrolling the widget it will stick to the chosen position
 enum PageViewAlignment {
   start,
   center,
@@ -32,6 +35,7 @@ class PageViewIndicator extends StatefulWidget {
   /// The height of the item
   final double height;
 
+  /// The itemCount for the builder property
   final int itemCount;
 
   const PageViewIndicator({
