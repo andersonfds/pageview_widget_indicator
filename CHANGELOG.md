@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.3+2
+
+* Updated documentation
+* Included more usage examples
+
 ## 0.0.3+1
 
 * Updated documentation
