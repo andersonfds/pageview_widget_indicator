@@ -38,12 +38,17 @@ class PageViewIndicator extends StatefulWidget {
   /// The itemCount for the builder property
   final int itemCount;
 
+  /// The initial item that should be selected
+  /// if not specified it will gett from the [pageController]
+  final int initialPage;
+
   const PageViewIndicator({
     Key key,
     @required this.builder,
     @required this.pageController,
     @required this.itemWidth,
     @required this.itemCount,
+    this.initialPage,
     this.height = kToolbarHeight,
     this.alignment = PageViewAlignment.center,
   }) : super(key: key);
@@ -96,7 +101,7 @@ class _PageViewIndicatorState extends State<PageViewIndicator> {
     super.didChangeDependencies();
     widget.pageController.removeListener(_onPageControllerChanged);
     widget.pageController.addListener(_onPageControllerChanged);
-    _page = widget.pageController.initialPage;
+    _page = widget.initialPage ?? widget.pageController.initialPage;
     setState(() {});
   }
 
