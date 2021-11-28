@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.3+3
+
+* Fixed some performance issues
+
 ## 0.0.3+2
 
 * Updated documentation
