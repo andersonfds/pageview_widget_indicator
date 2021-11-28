@@ -96,6 +96,8 @@ class _PageViewIndicatorState extends State<PageViewIndicator> {
     super.didChangeDependencies();
     widget.pageController.removeListener(_onPageControllerChanged);
     widget.pageController.addListener(_onPageControllerChanged);
+    _page = widget.pageController.initialPage;
+    setState(() {});
   }
 
   @override
