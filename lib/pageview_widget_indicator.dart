@@ -56,15 +56,15 @@ class _PageViewIndicatorState extends State<PageViewIndicator> {
   final ItemScrollController _scrollController = ItemScrollController();
   int _page = 0;
 
-  set page(int value) {
+  Future<void> setPage(int value) async {
     if (_page != value) {
-      _page = value;
-      _scrollController.scrollTo(
+      await _scrollController.scrollTo(
         index: value,
         duration: Duration(milliseconds: 300),
         curve: Curves.easeInOut,
         alignment: alignment,
       );
+      _page = value;
     }
   }
 
@@ -83,10 +83,10 @@ class _PageViewIndicatorState extends State<PageViewIndicator> {
     }
   }
 
-  _onPageControllerChanged() {
+  _onPageControllerChanged() async {
     final newPage = widget.pageController.page?.round();
-    if (newPage != null) {
-      page = newPage;
+    if (newPage != null && newPage != _page) {
+      await setPage(newPage);
       setState(() {});
     }
   }
@@ -96,8 +96,6 @@ class _PageViewIndicatorState extends State<PageViewIndicator> {
     super.didChangeDependencies();
     widget.pageController.removeListener(_onPageControllerChanged);
     widget.pageController.addListener(_onPageControllerChanged);
-    _page = widget.pageController.initialPage;
-    setState(() {});
   }
 
   @override
