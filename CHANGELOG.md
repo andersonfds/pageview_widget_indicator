@@ -3,6 +3,7 @@
 ## 0.0.3+3
 
 * Fixed some performance issues
+* Added padding support
 
 ## 0.0.3+2
 
