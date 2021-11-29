@@ -42,6 +42,9 @@ class PageViewIndicator extends StatefulWidget {
   /// if not specified it will gett from the [pageController]
   final int initialPage;
 
+  /// Inner padding of the lit
+  final EdgeInsetsGeometry padding;
+
   const PageViewIndicator({
     Key key,
     @required this.builder,
@@ -51,6 +54,7 @@ class PageViewIndicator extends StatefulWidget {
     this.initialPage,
     this.height = kToolbarHeight,
     this.alignment = PageViewAlignment.center,
+    this.padding,
   }) : super(key: key);
 
   @override
@@ -118,6 +122,7 @@ class _PageViewIndicatorState extends State<PageViewIndicator> {
       height: widget.height,
       child: ScrollablePositionedList.builder(
         physics: ClampingScrollPhysics(),
+        padding: widget.padding,
         itemScrollController: _scrollController,
         itemCount: widget.itemCount,
         initialScrollIndex: widget.pageController.initialPage,
