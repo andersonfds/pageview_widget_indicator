@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.4
+
+* Migrated to null-safety
+
 ## 0.0.3+3
 
 * Fixed some performance issues

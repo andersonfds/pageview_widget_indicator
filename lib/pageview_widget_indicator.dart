@@ -40,17 +40,17 @@ class PageViewIndicator extends StatefulWidget {
 
   /// The initial item that should be selected
   /// if not specified it will gett from the [pageController]
-  final int initialPage;
+  final int? initialPage;
 
   /// Inner padding of the lit
-  final EdgeInsetsGeometry padding;
+  final EdgeInsetsGeometry? padding;
 
   const PageViewIndicator({
-    Key key,
-    @required this.builder,
-    @required this.pageController,
-    @required this.itemWidth,
-    @required this.itemCount,
+    Key? key,
+    required this.builder,
+    required this.pageController,
+    required this.itemWidth,
+    required this.itemCount,
     this.initialPage,
     this.height = kToolbarHeight,
     this.alignment = PageViewAlignment.center,
@@ -122,7 +122,7 @@ class _PageViewIndicatorState extends State<PageViewIndicator> {
       height: widget.height,
       child: ScrollablePositionedList.builder(
         physics: ClampingScrollPhysics(),
-        padding: widget.padding,
+        padding: widget.padding as EdgeInsets?,
         itemScrollController: _scrollController,
         itemCount: widget.itemCount,
         initialScrollIndex: widget.pageController.initialPage,
